@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+                // kiem tra email
+        function ktemail(){
+            let reg =/^[a-zA-Z]*[0-9]*@gmail.com$/;
+            let chuoi=$("#txtemail").val();
+            if(reg.test(chuoi)){
+                $("#eremail").html("*");
+                 return true;
+            }
+            else{
+                $("#eremail").html("(*)Email không đúng");
+                return false;
+            }
+        }
+        $("#txtemail").blur(ktemail);
+        //kiem tra mật khẩu
+        function ktmk(){
+           let re=/^[a-z]*[0-9]{3}$/;
+        if(re.test($("#txtmk").val())){
+            $("#ermk").html("*");
+            return true;
+        }
+        else{
+            $("#ermk").html("Nhập chưa đúng");
+            return false;
+        }
+        }
+        $("#txtmk").blur(ktmk);
+    })
+    </script>
+    <style>
+      .container{
+        margin-top: 5px;
+        }
+      nav li a{
+        padding: 20px;
+           color:  black;
+           margin-left: 30px;
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row"><!--link-->
+           <div class="container">
+               <div class=" col-md-12 ">
+           
+                   <nav class="navbar navbar-expand-sm ">
+                       <ul class="navbar-nav">
+                       <li> <i class="fa fa-phone"></i> HOTLINE: 0343-022-534 </li>
+                       <li class="nav-item">
+                           <a href="#"><i class="fa fa-pencil-square-o"></i> Kiểm tra đơn hàng</a>
+                       </li>
+                       <li class="nav-item">
+                           <a href="Giohang.html"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a>
+                       </li>
+                       <li class="nav-item active">
+                           <a href="Dangnhap.html"><i class="fa fa-sign-in"></i> Đăng nhập </a>
+                       </li>
+                       <li class="nav-item">
+                           <a href="Dangky.html"><i class="fa fa-key"></i> Đăng ký </a>
+                       </li>
+                       </ul>
+                   
+                   </nav>
+               </div>
+           </div>
+        </div>
+        <hr>
+       
+        <div class="container-fluid" >
+            <div class="row" style="background-image: url('../image/backgrou');">
+             
+                <div class="col-7">
+                  <img src="../image/logo.jpg" width="40%" height="auto">
+                </div>
+               <div class="col-5" style="margin-top: 10px;">
+                       <form class="form-inline my-2 my-lg-0">
+                           <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search" >
+                          <button class="btn btn-default"><i class="fa fa-search"></i></button>
+                         </form>
+               </div>
+                
+            </div>
+        </div>
+         <!--nav-->
+         <div class="container-fluid">
+         <div class="row" style="background-color: gray;">
+           <div class="container">
+           <nav class="navbar navbar-expand-lg navbar-dark ">
+               <a class="navbar-brand" href="sitemap.html">SITE-MAP</a>
+               
+             
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav mr-auto">
+                   <li class="nav-item ">
+                     <a class="nav-link" href="Trangchu.html">TRANG CHỦ </a>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link" href="Gioithieu.html">GIỚI THIỆU</a>
+                   </li>
+                   <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      SẢN PHẨM
+                     </a>
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="Donnelly.html">Donnelly-Chocolate</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="Rittersport.html">Ritter Sport</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="Valrhona.html">Valrhona-chocolate</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="Vosges.html">Vosges-chocolate</a>
+                        <div class="dropdown-divider"></div>
+                      </div>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link " href="Tintuc.html">TIN TỨC</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link " href="Lienhe.html">LIÊN HỆ</a>
+                     </li>
+                 </ul>
+             </nav>
+            </div>
+            </div>
+           </div>
+           <!--nội dung -->
+           <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <h3 style="color: rgb(65, 146, 238);"></h3>
+                  <img src="../image/backgrou" width="100%;" height="auto;" >
+                </div>
+                <div class="col-9">
+                    <h3  style="color: rgb(65, 146, 238);">Đăng nhập hệ thống</h3>
+                   <div class="form-group">
+                       <label for="">Email:</label>
+                       <input type="email" name="" id="txtemail"  class="form-control" placeholder="Nhập email:">
+                       <div id="eremail"></div>
+                   </div>
+                   <div class="form-group">
+                       <label for="">Mật khẩu</label>
+                       <input type="password" name="" id="txtmk" class="form-control" placeholder="Nhập mật khẩu">
+                       <div id="ermk"></div>
+                   </div>
+                   <div class="form-group-inline">
+                       <button class="btn btn-dark">Đăng nhập</button>
+                       <a href="Dangky.html" style="font-size: 10px;">Quên mật khẩu?</a>
+                   </div>
+                </div>
+            </div>
+        </div> 
+      
+          
+       
+       <div class="container">
+           <div class="row"> <!--icon-->
+               <div class="container">
+                   <div class="row" style="margin-top:30px">
+                       <div class="col">
+                           <img src="../icons/Valrhona.png" alt="" height="200px;" width="250px;">
+                       </div>
+                       <div class="col">
+                           <img src="../icons/ritter.jpg" alt="">
+                       </div>
+                       <div class="col">
+                           <img src="../icons/richal.png" alt="">
+                       </div>
+                       <div class="col">
+                           <img src="../icons/logo-horizontal_190x (1).webp" alt="">           
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+        <!--footer-->
+       <div class="container-fluid">
+      
+                   <div class="row" style="background-color: rgb(82, 79, 79); ">
+                       <div class="container">
+                       <div class="row">
+                           <div class="col" id="fo">
+                               <h4> GIỚI THIỆU</h4>
+                               <p>Về chúng tôi</p>
+                               <p>Lĩnh vực hoạt động</p>
+                               <p>Hỏi đáp</p>
+                               <p>Quy chế hoạt động</p>
+                               <p>Tuyển dụng</p>
+                           </div>
+                           <div class="col" id="fo">
+                               <h4>TRỢ GIÚP</h4>
+                               <p>Hướng dẫn thanh toán</p>
+                               <p>Quy định đổi trả</p>
+                               <p>Chính sách bán hàng</p>
+                               <p>Chính sách bảo mật</p>
+                               <p>Thảo luận</p>
+                           </div>
+                           <div class="col" id="fo">
+                               <h4>THÔNG TIN CÔNG TY</h4>
+                               <p>Sô-Cô la</p>
+                               <p><i class="fa fa-map-marker"></i> Nguyễn Văn Bảo, Q.Gò Vấp, TP.HCM</p>
+                               <p> <i class="fa fa-envelope"></i>
+                                   <a href="lydangthaihung@gmail.com">email</a></i>
+                               </p>
+                               <p><i class="fa fa-phone"></i>
+                                   Phone: 0343-022-534</p>
+                           </div>
+                           <div class="col" id="fo">
+                               <h4>FACEBOOK</h4>
+                           </div>
+                       </div>
+                       </div>
+                   </div>
+                   <div class="row"style="background-color: black;">
+                       <div class="container" >
+                           <div class="row">
+                               <div class="col-6">
+                                   <h2 style="color: white;">HOTLINE: 0343-022-534</h2>
+                               </div>
+                               <div class="col-6">
+                                   <a href="#"> <i class="fa fa-facebook" style="font-size:24px;  color: white; "></i></a>
+                                   <a href="#">  <i class="fa fa-instagram" style="font-size:24px; color: white; padding-left: 5px;"></i></a> 
+                                   <a href="#"><i class="fa fa-pinterest" style="font-size:24px; color: white; padding-left: 5px;"></i></a>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+           </div>
+</body>
